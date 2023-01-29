@@ -27,7 +27,7 @@ const Logo = () => {
 						fontFamily='M PLUS Rounded 1c'
 						fontWeight="bold"
 						ml={3}>
-						Angel de Jesus
+						AngelJrz
 					</Text>
 				</LogoBox>
 		</Link>

@@ -1,5 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import Layout from '../components/layouts/main'
+import dynamic from "next/dynamic";
 
 const Website = ({ Component, pageProps, router }) => {
 	return (
@@ -11,4 +12,4 @@ const Website = ({ Component, pageProps, router }) => {
 	)
 }
 
-export default Website
+export default dynamic (() => Promise.resolve(Website), {ssr: false})
