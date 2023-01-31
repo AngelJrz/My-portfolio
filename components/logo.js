@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import FootprintIcon from './icons/footprint'
+import BoxesLogo  from './icons/boxeslogo'
 import { Text, useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
@@ -21,7 +21,7 @@ const Logo = () => {
 	return (
 		<Link href="/">
 				<LogoBox>
-					<FootprintIcon/>
+					<BoxesLogo/>
 					<Text
 						color={useColorModeValue('gray.800', 'whiteAlpha.900')}
 						fontFamily='M PLUS Rounded 1c'
