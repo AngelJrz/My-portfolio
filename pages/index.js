@@ -1,5 +1,10 @@
-import { Container, Box, Heading, Image, chakra, useColorModeValue } from "@chakra-ui/react"
+import NextLink from 'next/link'
+import { Container, Box, Heading, Image, chakra, useColorModeValue, Link, Button } from "@chakra-ui/react"
 import Section from '../components/section'
+import Paragraph from "../components/paragraph"
+import {ChevronRightIcon} from '@chakra-ui/icons'
+import { BioSection, BioYear } from '../components/bio'
+
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
 })
@@ -39,11 +44,66 @@ const Page = () => {
           </Box>
 				</Box>
 			</Box>
-      <Section delay={0.1}>
+
+      <Section delay={0.2}>
+
         <Heading as="h3" variant="section-title">
          My work 
         </Heading>
-        <p>Paragraph</p>
+        <Paragraph>
+          This is the principal description of the portfolio where you can put your information, also you can show some of your work like{' '}
+          <NextLink href="/work/backend-store">
+            <Link>Backend Store</Link>
+          </NextLink>.
+        </Paragraph>
+
+        <Box align="center" my={4}>
+          <NextLink href="/works">
+            <Button rightIcon={<ChevronRightIcon/>} colorScheme="teal">
+              My portfolio
+            </Button>
+          </NextLink>
+        </Box>
+
+      </Section>
+
+      <Section delay={0.3}>
+
+        <Heading as="h3" variant="section-title">
+          Bio
+        </Heading>
+
+        <BioSection>
+          <BioYear>1984</BioYear>
+          Born in Xalapa, México.
+        </BioSection>
+
+        <BioSection>
+          <BioYear>2023</BioYear>
+          Get Software Engineer Degree
+        </BioSection>
+
+        <BioSection>
+          <BioYear>2023 to present</BioYear>
+          Work as a engineer
+        </BioSection>
+
+      </Section>
+
+      <Section delay={0.4}>
+
+        <Heading as="h3" variant="section-title">
+          I Love
+        </Heading>
+
+        <Paragraph>
+          Art, Music,{' '}
+          <Link href='www.google.com'>
+            Drawing
+          </Link>
+          .
+        </Paragraph>
+
       </Section>
 		</Container>
 
