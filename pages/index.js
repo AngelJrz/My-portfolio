@@ -1,9 +1,10 @@
 import NextLink from 'next/link'
-import { Container, Box, Heading, Image, chakra, useColorModeValue, Link, Button } from "@chakra-ui/react"
+import { Container, Box, Heading, Image, chakra, useColorModeValue, Link, Button, List, ListItem, Icon} from "@chakra-ui/react"
 import Section from '../components/section'
 import Paragraph from "../components/paragraph"
 import {ChevronRightIcon} from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
+import { IoLogoTwitter, IoLogoGithub } from 'react-icons/io5'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -52,7 +53,7 @@ const Page = () => {
         </Heading>
         <Paragraph>
           This is the principal description of the portfolio where you can put your information, also you can show some of your work like{' '}
-          <NextLink href="/work/backend-store">
+          <NextLink href="/works/backend">
             <Link>Backend Store</Link>
           </NextLink>.
         </Paragraph>
@@ -104,6 +105,28 @@ const Page = () => {
           .
         </Paragraph>
 
+      </Section>
+
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          On the web
+        </Heading>
+        <List>
+          <ListItem>
+            <Link href="https://github.com/AngelJrz" target="_blank">
+              <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoGithub} />}>
+                @AngelJrz
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://twitter.com/_angeljrz" target="_blank">
+              <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoTwitter} />}>
+                @AngelJrz
+              </Button>
+            </Link>
+          </ListItem>
+        </List>
       </Section>
 		</Container>
 
