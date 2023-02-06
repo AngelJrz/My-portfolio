@@ -42,7 +42,7 @@ const Page = () => {
 			</Box>
 
 			<Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={10} mt={5} align="center">
-				Hello, I&apos;m a software engineer from México!
+        Software engineer tinkering with systems
 			</Box>
 
       <Section delay={0.2}>

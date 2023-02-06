@@ -6,8 +6,8 @@ import backendstorelogo from '../public/images/backendstorelogo.jpg'
 const Works = () => {
 	return(
 		<Container>
-			<Heading as="h3" fontSize={20} mb={4}>
-				Works
+			<Heading as="h3" fontSize={20} mb={4} mt={10}>
+				My Works
 			</Heading>
 
 			<SimpleGrid columns={[1,1,2]} gap={6}>
