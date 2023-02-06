@@ -12,11 +12,7 @@ const ProfileImage = chakra(Image, {
 const Page = () => {
 	return(
 		<Container> 
-			<Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} align="center">
-				Hello, I&apos;m a software engineer from México!
-			</Box>
-
-			<Box display={{md: 'flex'}}>
+			<Box display={{md: 'flex'}} mt={10}>
 				<Box flexGrow={1}>
 					<Heading as="h2" variant="page-title">
 						AngelJrz
@@ -43,6 +39,10 @@ const Page = () => {
             />
           </Box>
 				</Box>
+			</Box>
+
+			<Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={10} mt={5} align="center">
+				Hello, I&apos;m a software engineer from México!
 			</Box>
 
       <Section delay={0.2}>
